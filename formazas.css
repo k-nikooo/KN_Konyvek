@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body{
+    background: url("kepek/hh.jpg");
+    /*background-size: cover;*/
+    /*background: #8E9AAF;*/
+}
+
+main{
+    background: #f4f0ec;
+    max-width: 1000px;
+    margin: auto;
+}
+
+main, footer, section, article{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+table{
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid gray;
+    padding: 5px;
+}
+th{
+    background: #7e9098;
+    color: white;
+}
+
+td:nth-child(7){
+    border: none;
+    background: #7e9098;
+    padding-top: 5px;
+}
+
+td:nth-child(8){
+    border: none;
+    background: #c6b2a2;
+    padding-top: 5px;
+}
+
+tr:nth-child(even){
+    background: #c6b2a2;
+}
+
+
+
+fieldset div{
+    display: grid;
+    grid-template-columns: 100px auto;
+    background: #c6b2a2;
+}
+
+label{
+    text-align: right;
+    padding-right: 5px;
+}
+
+footer{text-align: center;}
+
+/*section{background: #929191;}*/
