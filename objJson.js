@@ -156,7 +156,15 @@ function sorModositas() {
     //alert("fejlesztés alatt");
     var id = $(this).attr("id");
     console.log(id);
-    urlap();
+    $("article").empty();
+    $("article").append("<form>");
+    $("article form").append("<fieldset>");
+    $("article form fieldset").append('<div><label for="sz">Szerző</label><input type="text" id="sz" name="sz" value="' + konyvek[id].szerzo + '"></div>');
+    $("article form fieldset").append('<div><label for="c">Cím</label><input type="text" id="c" name="c" value="' + konyvek[id].cim + '"></div>');
+    $("article form fieldset").append('<div><label for="k">Kötet</label><input type="text" id="k" name="k" value="' + konyvek[id].kotet + '"></div>');
+    $("article form fieldset").append('<div><label for="a">Ár</label><input type="text" id="a" name="a" value="' + konyvek[id].ar + '"></div>');
+    $("article form fieldset").append('<div><label for="o">Oldal</label><input type="text" id="o" name="o" value="' + konyvek[id].oldal + '"></div>');
+    $("article form fieldset").append('<div><label for="l">Leírás</label><input type="text" id="l" name="l" value="' + konyvek[id].leiras + '"></div>');
     $("article form").append('<input type="button" id="mm" name="mm" value="OK">');
     $("#mm").click(modosit);
 
@@ -175,17 +183,6 @@ function sorModositas() {
     }
 }
 
-function urlap() {
-    $("article").empty();
-    $("article").append("<form>");
-    $("article form").append("<fieldset>");
-    $("article form fieldset").append('<div><label for="sz">Szerző</label><input type="text" id="sz" name="sz" required placeholder="Kim Harrison"></div>');
-    $("article form fieldset").append('<div><label for="c">Cím</label><input type="text" id="c" name="c" required placeholder="Boszorkányfutam"></div>');
-    $("article form fieldset").append('<div><label for="k">Kötet</label><input type="text" id="k" name="k" required placeholder="(Hollows 1.)"></div>');
-    $("article form fieldset").append('<div><label for="a">Ár</label><input type="text" id="a" name="a" required placeholder="2999 Ft"></div>');
-    $("article form fieldset").append('<div><label for="o">Oldal</label><input type="text" id="o" name="o" required placeholder="530"></div>');
-    $("article form fieldset").append('<div><label for="l">Leírás</label><input type="text" id="l" name="l" required placeholder="Rachel ​Morgan, a boszorkány..."></div>');
-}
 
 //function szoveg(){
 //    $("section table tr td").eq(5).empty();
